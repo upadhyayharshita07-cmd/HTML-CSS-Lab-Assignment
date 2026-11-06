@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1: Starting a Git Repository</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="lab-header">
+      <div class="badge">Invertis University | BCS352</div>
+      <h1>Assignment 1: Starting a Git Repository</h1>
+      <p class="meta">B.Tech CSE - Second Year | HTML &amp; CSS Introduction Lab (BCS352)</p>
+    </header>
+
+    <section class="card">
+      <h2>Experiment Aim</h2>
+      <p>Start a Git repository for your lab folder and save your work with commits.</p>
+    </section>
+
+    <section class="card">
+      <h2>Task 1: Repository Initialization & Local Configuration</h2>
+      <p>Created directory <code>html-lab</code> and initialized local repository with dedicated author identity:</p>
+      <pre><code>git init
+git config --local user.name "Harshita"
+git config --local user.email "harshita@invertis.org"
+git config user.name   # Outputs: Harshita
+git config user.email  # Outputs: harshita@invertis.org</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>Task 2: Initial Commit (index.html)</h2>
+      <p>Created <code>index.html</code> with an <code>&lt;h1&gt;</code> heading, tracked with git status, staged, and committed with message <em>"Add home page"</em>.</p>
+      <div class="code-preview">
+        <h3>Preview of index.html (Commit 1):</h3>
+        <h1>Welcome to BCS352 HTML Lab</h1>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Task 3: Second Commit (Heading 2) & Commit History</h2>
+      <p>Added an <code>&lt;h2&gt;</code> heading below <code>&lt;h1&gt;</code> and created commit with message <em>"Add next meeting heading"</em>.</p>
+      <div class="code-preview">
+        <h3>Preview of index.html (Commit 2):</h3>
+        <h1>Welcome to BCS352 HTML Lab</h1>
+        <h2>Next Meeting: Friday 10:00 AM</h2>
+      </div>
+      <h3>Commit Log (<code>git log --oneline</code>):</h3>
+      <div class="terminal-box">
+        <span class="commit-hash">ec1f8a2</span> (HEAD -&gt; master) Add next meeting heading<br>
+        <span class="commit-hash">a9d4e21</span> Add home page
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Terminal Output Verification</h2>
+      <p>The complete terminal session has been captured in <code>terminal_output.txt</code>.</p>
+    </section>
+  </div>
+</body>
+</html>

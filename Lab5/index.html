@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Links and Images</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Task 1: Welcome page with link to portfolio -->
+  <section class="site-section">
+    <h1>Welcome to My Site</h1>
+    <p>Explore my projects, coursework, and technical skills in my <a href="#portfolio-section">portfolio</a>.</p>
+  </section>
+
+  <hr>
+
+  <!-- Task 2 & 3: Portfolio section and 200x200 Image with alt text -->
+  <section id="portfolio-section" class="site-section">
+    <h1>Student Portfolio</h1>
+    <p><a href="#">Back to Home</a></p>
+    
+    <h2>Profile Photo</h2>
+    <div class="image-box">
+      <!-- 200x200 image representation -->
+      <svg width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="Student Profile Avatar Illustration">
+        <rect width="200" height="200" fill="#0284c7" rx="8"/>
+        <circle cx="100" cy="75" r="40" fill="#ffffff"/>
+        <path d="M 40 170 C 40 130, 160 130, 160 170 Z" fill="#ffffff"/>
+      </svg>
+      <p class="caption">Width: 200px | Height: 200px<br>Alt Text: "Student Profile Avatar Illustration"</p>
+    </div>
+  </section>
+</body>
+</html>

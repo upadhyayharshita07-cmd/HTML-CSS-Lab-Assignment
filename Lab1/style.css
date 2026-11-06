@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #2b2d42;
+  line-height: 1.6;
+  padding: 30px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lab-header {
+  background: linear-gradient(135deg, #1d3557 0%, #457b9d 100%);
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.lab-header h1 {
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.meta {
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.card h2 {
+  color: #1d3557;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e2eafc;
+  padding-bottom: 6px;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  color: #457b9d;
+  margin: 14px 0 8px 0;
+}
+
+pre {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 14px 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+code {
+  font-family: "Fira Code", Consolas, Monaco, "Courier New", Courier, monospace;
+}
+
+.code-preview {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.code-preview h1 {
+  font-size: 1.6rem;
+  color: #0f172a;
+}
+
+.code-preview h2 {
+  font-size: 1.2rem;
+  color: #334155;
+  border: none;
+  padding: 0;
+  margin-top: 6px;
+}
+
+.terminal-box {
+  background: #0f172a;
+  color: #38bdf8;
+  font-family: monospace;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.commit-hash {
+  color: #fbbf24;
+  font-weight: bold;
+}

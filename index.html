@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCS352 - HTML and CSS Introduction Lab Manual</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%);
+      color: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      margin-bottom: 35px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p.lead {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      margin-bottom: 15px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.95rem;
+    }
+
+    .hero-meta span strong {
+      color: #93c5fd;
+    }
+
+    .lab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .lab-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lab-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-thumb {
+      width: 100%;
+      height: 180px;
+      background-color: #f1f5f9;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .card-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-num {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .card-body h2 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .card-body p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 15px;
+      flex: 1;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      background: #f1f5f9;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="badge">Invertis University, Bareilly</div>
+      <h1>HTML &amp; CSS Introduction Lab (BCS352)</h1>
+      <p class="lead">Complete practical manual comprising all 15 laboratory assignments conforming to standard report format specifications.</p>
+      <div class="hero-meta">
+        <span><strong>Student Name:</strong> Harshita Upadhyay</span>
+        <span><strong>Roll Number:</strong> BCS2025411</span>
+        <span><strong>Course:</strong> B.Tech CSE (2nd Year)</span>
+        <span><strong>Total Experiments:</strong> 15</span>
+      </div>
+    </header>
+
+    <div class="lab-grid">
+      <!-- Lab 1 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab1/images/screenshot.png" alt="Lab 1 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 01</div>
+          <h2>Starting a Git Repository</h2>
+          <p>Initialize local repository, configure local credentials, track untracked files, and craft commits.</p>
+          <div class="card-actions">
+            <a href="Lab1/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab1/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 2 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab2/images/screenshot.png" alt="Lab 2 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 02</div>
+          <h2>Pushing and Cloning a Repository</h2>
+          <p>Configure bare remote origin, push committed branches, and clone into a working copy.</p>
+          <div class="card-actions">
+            <a href="Lab2/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab2/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 3 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab3/images/screenshot.png" alt="Lab 3 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 03</div>
+          <h2>Your First HTML Page</h2>
+          <p>HTML5 document structure, title, headings (h1, h2, h3), paragraphs, strong, em, and br elements.</p>
+          <div class="card-actions">
+            <a href="Lab3/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab3/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 4 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab4/images/screenshot.png" alt="Lab 4 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 04</div>
+          <h2>Divs, Attributes and a Small Fix</h2>
+          <p>Group layouts with divs, custom data-* attributes, and fixing malformed HTML syntax errors.</p>
+          <div class="card-actions">
+            <a href="Lab4/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab4/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 5 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab5/images/screenshot.png" alt="Lab 5 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 05</div>
+          <h2>Links and Images</h2>
+          <p>Interpage anchor navigation, image embeddings with explicit 200x200 dimensions and alt text.</p>
+          <div class="card-actions">
+            <a href="Lab5/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab5/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 6 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab6/images/screenshot.png" alt="Lab 6 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 06</div>
+          <h2>Types of HTML Lists</h2>
+          <p>Unordered bulleted lists, hierarchical nested ordered lists, and term-description FAQ lists.</p>
+          <div class="card-actions">
+            <a href="Lab6/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab6/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 7 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab7/images/screenshot.png" alt="Lab 7 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 07</div>
+          <h2>About Me Page</h2>
+          <p>Semantic HTML5 layout with header, nav, main, section, footer, fragment links, and mailto anchors.</p>
+          <div class="card-actions">
+            <a href="Lab7/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab7/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 8 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab8/images/screenshot.png" alt="Lab 8 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 08</div>
+          <h2>Sign-Up Forms and Choices</h2>
+          <p>Labelled text/password inputs, mutual exclusion radio groups, select dropdowns, and required validation.</p>
+          <div class="card-actions">
+            <a href="Lab8/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab8/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 9 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab9/images/screenshot.png" alt="Lab 9 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 09</div>
+          <h2>Tables with Headers and Footers</h2>
+          <p>Accessible data tables with captions, thead, tbody, summary tfoot, and header scope attributes.</p>
+          <div class="card-actions">
+            <a href="Lab9/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab9/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 10 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab10/images/screenshot.png" alt="Lab 10 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 10</div>
+          <h2>CSS Fundamentals</h2>
+          <p>Inline, internal, and external linked CSS, element/class/ID selectors, typography, and styling cascades.</p>
+          <div class="card-actions">
+            <a href="Lab10/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab10/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 11 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab11/images/screenshot.png" alt="Lab 11 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 11</div>
+          <h2>Units and CSS Variables</h2>
+          <p>Absolute px, percentage %, root rem scaling, and global design token custom properties.</p>
+          <div class="card-actions">
+            <a href="Lab11/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab11/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 12 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab12/images/screenshot.png" alt="Lab 12 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 12</div>
+          <h2>Box Model, Cards and Scrolling</h2>
+          <p>content-box vs border-box dimension comparison, card components, and overflow auto scrollbars.</p>
+          <div class="card-actions">
+            <a href="Lab12/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab12/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 13 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab13/images/screenshot.png" alt="Lab 13 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 13</div>
+          <h2>Flexbox Layouts</h2>
+          <p>Horizontal flex navigation bar, centered cards with justify-content/align-items, and wrapping flex rows.</p>
+          <div class="card-actions">
+            <a href="Lab13/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab13/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 14 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab14/images/screenshot.png" alt="Lab 14 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 14</div>
+          <h2>CSS Grid Layouts</h2>
+          <p>3-column fraction grids, responsive auto-filling image gallery, and named grid-template-areas.</p>
+          <div class="card-actions">
+            <a href="Lab14/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab14/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 15 -->
+      <div class="lab-card">
+        <div class="card-thumb"><img src="Lab15/images/screenshot.png" alt="Lab 15 Preview"></div>
+        <div class="card-body">
+          <div class="card-num">Experiment 15</div>
+          <h2>Responsive Pages with Media Queries</h2>
+          <p>Mobile-first layout switching, fluid scalable images with max-width: 100%, and viewport-adaptive typography.</p>
+          <div class="card-actions">
+            <a href="Lab15/index.html" class="btn btn-primary">Open Lab</a>
+            <a href="Lab15/README.md" class="btn btn-outline">Read Manual</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Invertis University, Bareilly — B.Tech Computer Science and Engineering | HTML &amp; CSS Practical Manual</p>
+    </footer>
+  </div>
+</body>
+</html>
+

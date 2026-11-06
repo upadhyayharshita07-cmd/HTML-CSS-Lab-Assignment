@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #1e293b;
+  line-height: 1.6;
+  padding: 30px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lab-header {
+  background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.lab-header h1 {
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.meta {
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.card h2 {
+  color: #0f172a;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 6px;
+}
+
+pre {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 14px 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+code {
+  font-family: Consolas, Monaco, "Courier New", monospace;
+}
+
+.terminal-box {
+  background: #1e293b;
+  color: #38bdf8;
+  font-family: Consolas, Monaco, monospace;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.commit-hash {
+  color: #fbbf24;
+  font-weight: bold;
+}
+
+.diagram {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.box {
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  padding: 14px 18px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  color: #334155;
+}
+
+.highlight-box {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.arrow {
+  color: #64748b;
+  font-family: monospace;
+  font-weight: bold;
+}

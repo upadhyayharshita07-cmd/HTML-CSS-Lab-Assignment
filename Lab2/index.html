@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 2: Pushing and Cloning a Repository</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="lab-header">
+      <div class="badge">Invertis University | BCS352</div>
+      <h1>Assignment 2: Pushing and Cloning a Repository</h1>
+      <p class="meta">B.Tech CSE - Second Year | HTML &amp; CSS Introduction Lab (BCS352)</p>
+    </header>
+
+    <section class="card">
+      <h2>Experiment Aim</h2>
+      <p>Send your commits to a second repository on your computer and make a copy of it with clone.</p>
+    </section>
+
+    <section class="card">
+      <h2>Task 1: Create Bare Repository and Configure Remote</h2>
+      <p>A bare repository acts as a centralized server repository without a working tree. We created <code>html-remote</code> and configured it as <code>origin</code>:</p>
+      <pre><code># Inside html-lab:
+git init --bare ../html-remote
+git remote add origin ../html-remote
+git remote -v</code></pre>
+      <div class="terminal-box">
+        origin  ../html-remote (fetch)<br>
+        origin  ../html-remote (push)
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Task 2: Pushing Commits to Origin</h2>
+      <p>Pushed the local branch to the newly configured remote repository:</p>
+      <pre><code>git push origin master</code></pre>
+      <div class="terminal-box">
+        To ../html-remote<br>
+        * [new branch]      master -&gt; master
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Task 3: Cloning Repository and Verifying Log</h2>
+      <p>Cloned the remote repository into a sibling directory named <code>html-copy</code> and verified commit integrity:</p>
+      <pre><code>cd ..
+git clone html-remote html-copy
+cd html-copy
+git log --oneline</code></pre>
+      <div class="terminal-box">
+        Cloning into 'html-copy'...<br>
+        done.<br>
+        <span class="commit-hash">81f3b2a</span> (HEAD -&gt; master, origin/master) Add home page and next meeting heading
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Architecture Overview</h2>
+      <div class="diagram">
+        <div class="box">Local: html-lab<br><small>(Working Tree + Git Repo)</small></div>
+        <div class="arrow">─── git push ───&gt;</div>
+        <div class="box highlight-box">Remote: html-remote<br><small>(Bare Git Repository)</small></div>
+        <div class="arrow">─── git clone ───&gt;</div>
+        <div class="box">Clone: html-copy<br><small>(Identical Working Tree)</small></div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
